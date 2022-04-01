@@ -23,6 +23,9 @@ build: ## Build all docker images from docker-compose.yml
 up: ## Lift containers already built
 	docker-compose up
 
+dev: ## Start server in development mode
+	yarn dev
+
 down-up: ## Lift containers already built (down first)
 	docker-compose down && docker-compose up
 

@@ -4,6 +4,7 @@
   "description": "Project for practical use of PrismaIO",
   "main": "index.js",
   "scripts": {
+    "dev": "ts-node-dev --exit-child --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
