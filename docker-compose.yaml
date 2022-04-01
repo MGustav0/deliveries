@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+
+  # main:
+  #   container_name: main
+  #   build:
+  #     context: .
+  #     target: development
+  #   volumes:
+  #     - .:/usr/src/app — /usr/src/app/node_modules
+  #   ports:
+  #     - 3000:3000
+  #   command: yarn start:dev
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - postgres
+
+  postgres:
+    image: postgres:14.2
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./var/postgresql:/var/lib/postgresql/data:rw
+      - ./cli:/cli
+    env_file:
+      - .env
