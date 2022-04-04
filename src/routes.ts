@@ -30,7 +30,7 @@ routes.post(
 );
 
 routes.post('/client', createClientController.handle);
-routes.post(
+routes.get(
   '/client/deliveries',
   ensureAuthenticateClient,
   findAllDeliveriesController.handle,
